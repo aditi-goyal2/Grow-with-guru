@@ -1,0 +1,13 @@
+.write_blog{
+     margin: 6em;
+}
+#previewImg{
+  width: 100%;
+ max-width: 300px;
+ height: auto;
+ max-height:180px;
+}
+.form-group
+{
+  max-width: 100%;
+}
