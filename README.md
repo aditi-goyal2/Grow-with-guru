@@ -27,22 +27,17 @@ ENTITIES
  
 ADMIN-    
 
-Admin can login, manage tutor by adding new teachers and updating their profiles.
-
- Admin can also check for the registered students or  tutors .
-
-Admin can share credentials to tutors & students by Email.
-
-Admin can respond to complains if any.
+* Admin can login, manage tutor by adding new teachers and updating their profiles.
+* Admin can also check for the registered students or  tutors .
+* Admin can share credentials to tutors & students by Email.
+* Admin can respond to complains if any.
 
 STUDENTS-
 
-Students can register and login to view the tutors .
-
-Students can select the tutor and after selecting will raise the request of demo lecture. Later finalize the teacher.
+* Students can register and login to view the tutors .
+* Students can select the tutor and after selecting will raise the request of demo lecture. Later finalize the teacher.
 
 TUTOR-
 
-Tutor can login by using credentials which will be provided by mail. 
-
-They can check for the request for demo lecture and accept the request. They can also check the booking done
+* Tutor can login by using credentials which will be provided by mail. 
+* They can check for the request for demo lecture and accept the request. They can also check the booking done
