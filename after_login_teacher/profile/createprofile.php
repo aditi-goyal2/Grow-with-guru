@@ -20,6 +20,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $Time= $_POST['Time'];
     $fee= $_POST['fee'];
     $more_info= $_POST['more_info'];
+    $file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
     $file_identity = addslashes(file_get_contents($_FILES["identity"]["tmp_name"]));
    
     
@@ -31,15 +32,14 @@ $database = "online_tutor";
 $conn = mysqli_connect($servername, $uname, $pword, $database);
 
 //submit to database sql query to be executed
-$sql = "INSERT INTO `profile` (`first_name`,`last_name`,`Address`,`phone`, `email`, `location`, `Age`, `gender`, `speciality`, `achievement`, `Subject`, `Qualification`, `Profession`, `Experience`, `Time`, `fee`, `more_info` , `identity`) VALUES (' $first_name',  ' $last_name',  '$Address', '$phone', '$email', '$location',  '$Age',  '$gender', '$speciality', '$achievement', '$Subject', '$Qualification', '$Profession', '$Experience', '$Time', '$fee', '$more_info' , '$file_identity')"; 
+$sql = "INSERT INTO `profile` (`first_name`,`last_name`,`Address`,`phone`, `email`, `location`, `Age`, `gender`, `speciality`, `achievement`, `Subject`, `Qualification`, `Profession`, `Experience`, `Time`, `fee`, `more_info` , `profile_image` , `identity`) VALUES (' $first_name',  ' $last_name',  '$Address', '$phone', '$email', '$location',  '$Age',  '$gender', '$speciality', '$achievement', '$Subject', '$Qualification', '$Profession', '$Experience', '$Time', '$fee', '$more_info' , '$file', '$file_identity')"; 
 $result = mysqli_query($conn, $sql);
 
 if($result){
-    echo '<div class="alert alert-sucess alert-dismissiable fade show" role="alert"> <center><strong><h1>Your profile has been updated!</h1></strong></center>
-    </div>'; 
+    header( "location:http://localhost/new/after_login_teacher/profile/success.html"); 
 }
 else{
-    echo "The record was not inserted successfully becoz --->". mysqli_error($conn);
+    header( "location:http://localhost/new/after_login_teacher/profile/error.html");   
 }
 }
 ?>

@@ -48,7 +48,7 @@
           <a class="nav-link" href="../Aboutus/about.html">ABOUT US</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="../profile_student/profile_student.html">SEARCH</a>
+          <a class="nav-link" href="../profile_student/profile_student.php">SEARCH</a>
         </li>
         
           <li class="nav-item dropdown active">
@@ -56,7 +56,7 @@
               BLOG
             </a>
             <div class="dropdown-menu" style="right: auto; left: 0;" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="../blog/blog.html">Blog post</a>
+              <a class="dropdown-item" href="../blog/blog.php">Blog post</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="../blog/write_blog.html"> Write Blog</a>
             </div>
@@ -73,203 +73,202 @@
 </nav> 
       
 <div class="container bootstrap snippet">
-    <div class="row">
-  		<div class="col-sm-10"><h1>My Profile</h1></div>
-    	
-    </div>
-    <div class="row">
-  		<div class="col-sm-3"><!--left col-->
-              
+  <div class="row">
+    <div class="col-sm-10"><h1>My Profile</h1></div>
+    
+  </div>
+  <div class="row">
+    <div class="col-sm-3"><!--left col-->
+      <form class="form" form action="createprofile.php" method="post" id="registrationForm" enctype="multipart/form-data">
 
-            <div class="text-center">
+          <div class="text-center">
               <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail " id="previewImg" alt="avatar">
-                <h6>Upload a different photo...</h6>
-                <input type="file" name="photo" onchange="previewFile(this);" accept="image/*" required>
-              </div></hr><br>
+              <h6>Upload a different photo...</h6>
+              <input type="file"  onchange="previewFile(this);" accept="image/*" id="image" name="image" required>
+            </div></hr><br>
 
-        </div><!--/col-3-->
-    	<div class="col-sm-9">
-            <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#home">Personal</a></li>
-                <li><a data-toggle="tab" href="#messages">Professional</a></li>
-              </ul>
+      </div><!--/col-3-->
+    <div class="col-sm-9">
+          <ul class="nav nav-tabs">
+              <li class="active"><a data-toggle="tab" href="#home">Personal</a></li>
+              <li><a data-toggle="tab" href="#messages">Professional</a></li>
+            </ul>
 
-              
-          <div class="tab-content">
-            <div class="tab-pane active" id="home">
-                <hr>
-                  <form class="form" action="##" method="post" id="registrationForm">
-                      <div class="form-group">
-                          
-                          <div class="col-xs-6">
-                              <label for="first_name"><h4>First name</h4></label>
-                              <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          
-                          <div class="col-xs-6">
-                            <label for="last_name"><h4>Last name</h4></label>
-                              <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
-                          </div>
-                      </div>
-          
-                      <div class="form-group">
-                        <div class="form-group">
-                            <div class="col-xs-6">
-                               <label for="mobile"><h4>Address</h4></label>
-                                <input type="text" class="form-control" name="Address" id="Address" placeholder="enter complete address" title="enter your Address.">
-                            </div>
-                        </div>
-                          
-                          <div class="col-xs-6">
-                              <label for="phone"><h4>Contact No.</h4></label>
-                              <input type="text" class="form-control" name="phone" id="phone" placeholder="enter your contact no." title="enter your phone number if any.">
-                          </div>
-                      </div>
-          
-                      
-                      <div class="form-group">
-                          
-                          <div class="col-xs-6">
-                              <label for="email"><h4>Email</h4></label>
-                              <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          
-                          <div class="col-xs-6">
-                              <label for="email"><h4>Location</h4></label>
-                              <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          
-                          <div class="col-xs-6">
-                              <label for="AGE"><h4>AGE</h4></label>
-                              <input type="number" class="form-control" name="AGE" id="Age" placeholder="Age" title="enter your Age.">
-                          </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="col-xs-6">
-                            <label for="Gender"><h4>Gender</h4></label>
-                            <select class="form-control" name="gender" id="gender" style=" height:2.5em;">
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        </select>
-                        </div>
-                    </div>
-
-                      
-                      <div class="form-group">
-                           <div class="col-xs-12">
-                                <br>
-                              	<button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
-                               	<button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
-                            </div>
-                      </div>
-              	</form>
-              
+            
+        <div class="tab-content">
+          <div class="tab-pane active" id="home">
               <hr>
-              
-             </div><!--/tab-pane-->
-             <div class="tab-pane" id="messages">
-               
-               <h2></h2>
-               
-               <hr>
-                  <form class="form" action="##" method="post" id="registrationForm">
-
-
+                <form class="form" form action="createprofile.php" method="post" id="registrationForm" enctype="multipart/form-data">
                     <div class="form-group">
-                      <div class="col-xs-6">
-                        <label for="Subject"><h4>Subject 1:</h4></label>
-                        <input type="text" class="form-control" name="Subject" id="Subject" placeholder="preferred subjects" title="enter your subjects.">
+                        
+                        <div class="col-xs-6">
+                            <label for="first_name"><h4>First name</h4></label>
+                            <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
+                        </div>
                     </div>
-                </div>
-
-                <div class="form-group">
-                  <div class="col-xs-6">
-                      <label for="Qualification"><h4>Qualification</h4></label>
-                      <select class="form-control" name="Qualification" id="Qualification" style=" height:2.5em;">
-                  <option value="Intermediate">Intermediate</option>
-                  <option value="Gradute">Gradute</option>
-                  <option value=" Post Gradute">Post Gradute</option>
-                  </select>
-                  </div>
-              </div>
-
                     <div class="form-group">
-                          
+                        
+                        <div class="col-xs-6">
+                          <label for="last_name"><h4>Last name</h4></label>
+                            <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
+                        </div>
+                    </div>
+        
+                    <div class="form-group">
+                      <div class="form-group">
+                          <div class="col-xs-6">
+                             <label for="mobile"><h4>Address</h4></label>
+                              <input type="text" class="form-control" name="Address" id="Address" placeholder="enter complete address" title="enter your Address.">
+                          </div>
+                      </div>
+                        
+                        <div class="col-xs-6">
+                            <label for="phone"><h4>Contact No.</h4></label>
+                            <input type="text" class="form-control" name="phone" id="phone" placeholder="enter your contact no." title="enter your phone number if any.">
+                        </div>
+                    </div>
+        
+                    
+                    <div class="form-group">
+                        
+                        <div class="col-xs-6">
+                            <label for="email"><h4>Email</h4></label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        
+                        <div class="col-xs-6">
+                            <label for="email"><h4>Location</h4></label>
+                            <input type="text" class="form-control" id="location" name="location" placeholder="somewhere" title="enter a location">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        
+                        <div class="col-xs-6">
+                            <label for="AGE"><h4>AGE</h4></label>
+                            <input type="number" class="form-control" name="Age" id="Age" placeholder="Age" title="enter your Age.">
+                        </div>
+                    </div>
+                    <div class="form-group">
                       <div class="col-xs-6">
-                          <label for="email"><h4>Subject 2:</h4></label>
-                          <input type="text" class="form-control" id="Profession" placeholder="preferred suibject" title="Profession">
+                          <label for="Gender"><h4>Gender</h4></label>
+                          <select class="form-control" name="gender" id="gender" style=" height:2.5em;">
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      </select>
+                      </div>
+                  </div>
+
+                  
+            
+            <hr>
+            
+           </div><!--/tab-pane-->
+           <div class="tab-pane" id="messages">
+             
+             <h2></h2>
+             
+             <hr>
+                <form class="form" action="createprofile.php" method="post" id="registrationForm" enctype="multipart/form-data">
+                      <div class="form-group">
+                        
+                        <div class="form-group">
+                          <div class="col-xs-6">
+                            <label for="Subject"><h4>Subject 1:</h4></label>
+                            <input type="text" class="form-control" name="sub1" id="sub1" placeholder="preferred subjects" title="enter your subjects.">
+                        </div>
+                    </div>
+                  
+                    <div class="form-group">
+                      <div class="col-xs-6">
+                          <label for="Qualification"><h4>Qualification</h4></label>
+                          <select class="form-control" name="qualification" id="qualification" style=" height:2.5em;">
+                      <option value="Intermediate">Intermediate</option>
+                      <option value="Gradute">Gradute</option>
+                      <option value=" Post Gradute">Post Gradute</option>
+                      </select>
                       </div>
                   </div>
                   
-              
-                  <div class="form-group">
-                    <div class="col-xs-6">
-                      <label for="Subject"><h4>School/University</h4></label>
-                      <input type="text" class="form-control" name="Subject" id="Subject" placeholder="enter school/university name" title="enter your school/university">
-                  </div>
-              </div>
-
-                     <div class="form-group">
-                          
+                        <div class="form-group">
+                              
                           <div class="col-xs-6">
-                              <label for="Experience"><h4>Class/Year of Graduation</h4></label>
-                              <input type="number" class="form-control" name="Experience" id="Experience" placeholder="enter years of graduation" title="enter your years of experience.">
+                              <label for="email"><h4>Subject 2:</h4></label>
+                              <input type="text" class="form-control" id="sub2" name="sub2" placeholder="preferred suibject" title="Profession">
                           </div>
                       </div>
-                 
-
-                      <div class="form-group">
-                        <div class="col-xs-6">
-                            <label for="Time"><h4>Suitable Time</h4></label>
-                            <select class="form-control" name="Time" id="Time" style=" height:2.5em;">
-                        <option value="1">morning</option>
-                        <option value="2">Afternoon</option>
-                        <option value="3">Evening</option>
-                        </select>
-                        </div>
-                    </div>
                       
-                      <div class="form-group">
-                          
-                          <div class="col-xs-6">
-                              <label for="fee"><h4>Fee</h4></label>
-                              <input type="text" class="form-control" name="fee" id="fee" placeholder="fee per month" title="fees.">
-                          </div>
-                      </div>
-
-                    
-                    
+                  
                       <div class="form-group">
                         <div class="col-xs-6">
-                        <label for=""><h4>Upload your id </h4></label>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                        </div>
+                          <label for="Subject"><h4>School/University</h4></label>
+                          <input type="text" class="form-control" name="school" id="school" placeholder="enter school/university name" title="enter your school/university">
                       </div>
-                    
-
-                      <div class="form-group">
-                           <div class="col-xs-12">
-                                <br>
-                              	<button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
-                               	<button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                  </div>
+                  
+                         <div class="form-group">
+                              
+                              <div class="col-xs-6">
+                                  <label for="Experience"><h4>Class/Year of Graduation</h4></label>
+                                  <input type="number" class="form-control" name="class" id="class" placeholder="enter years of graduation" title="enter your years of experience.">
+                              </div>
+                          </div>
+                     
+                  
+                          <div class="form-group">
+                            <div class="col-xs-6">
+                                <label for="Time"><h4>Suitable Time</h4></label>
+                                <select class="form-control" name="time" id="time" style=" height:2.5em;">
+                            <option value="1">morning</option>
+                            <option value="2">Afternoon</option>
+                            <option value="3">Evening</option>
+                            </select>
                             </div>
-                      </div>
-
-                      
-                  </form>
+                        </div>
+                          
+                          <div class="form-group">
+                              
+                              <div class="col-xs-6">
+                                  <label for="fee"><h4>Fee</h4></label>
+                                  <input type="text" class="form-control" name="fee" id="fee" placeholder="fee per month" title="fees.">
+                              </div>
+                          </div>
                   
-       </div>
-       </div>
-       </div>
-       </div>
-       </div>
+                        
+                        
+                          <div class="form-group">
+                            <div class="col-xs-6">
+                            <label for=""><h4>Upload your id </h4></label>
+                            <input type="file" class="form-control mb-3 "
+                
+                name="identity"
+                id="identity"
+                accept="image/*" />
+                            </div>
+                          </div>  
+                  
+
+                    <div class="form-group">
+                         <div class="col-xs-12">
+                              <br>
+                              <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
+                               <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                          </div>
+                    </div>
+
+                    
+                </form>
+                
+     </div>
+     </div>
+     </div>
+     </div>
+     </div>
+     
        <br><br><br>
+       
+    </div>
        <!--footer-->
        <footer class="footer-distributed">
  
@@ -369,4 +368,4 @@ AOS.init();
        </body>
        </html>        
                     
-            
+    

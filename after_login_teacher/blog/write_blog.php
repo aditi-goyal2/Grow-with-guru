@@ -29,13 +29,9 @@ $result = mysqli_query($conn, $sql);
 if($result){
    
     
-    ?>
-    <script>
-         alert("Your Blog is ready now!!");
-         header( "location:http://localhost/new/after_login/blog/blog.html");
-    </script>    
+   
+         header( "location:http://localhost/new/after_login_teacher/blog/blog.php");
     
-   <?php  
 }
 else{
     ?>
