@@ -1,4 +1,4 @@
-# new
+# Grow with guru
 
 INTRODUCTION
 
